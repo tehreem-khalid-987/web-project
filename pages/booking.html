@@ -5,98 +5,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Event - The Knot Studio</title>
-    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="booking.css">
 </head>
 <body>
-   <!--Navigation bar, same for all the pages-->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">💍</span>
-                <span class="logo-text">The Knot Studio</span>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <span class="logo-icon">💍</span>
+            <span class="logo-text">The Knot Studio</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="booking.html" class="nav-link active">Book Now</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Booking Form Section -->
+<section class="form-section">
+    <div class="form-container">
+        <h1 class="form-title">Book Your Event</h1>
+        <p class="form-subtitle">Fill in the details below and we'll get back to you soon!</p>
+
+        <!-- FORM  -->
+        <form action="submit.php" method="POST">
+
+            <div class="form-group">
+                <label class="form-label">Full Name <span class="required">*</span></label>
+                <input type="text" name="full_name" class="form-input"
+                       placeholder="Enter your full name" required>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="booking.html" class="nav-link active">Book Now</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Form for booking and reservations -->
-    <section class="form-section">
-        <div class="form-container">
-            <h1 class="form-title">Book Your Event</h1>
-            <p class="form-subtitle">Fill in the details below and we'll get back to you soon!</p>
+            <div class="form-group">
+                <label class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" name="email" class="form-input"
+                       placeholder="your.email@example.com" required>
+            </div>
 
-            <form>
-                <!-- Name -->
-                <div class="form-group">
-                    <label class="form-label">Full Name <span class="required">*</span></label>
-                    <input type="text" class="form-input" placeholder="Enter your full name" required>
+            <div class="form-group">
+                <label class="form-label">Contact Number <span class="required">*</span></label>
+                <input type="tel" name="contact" class="form-input"
+                       placeholder="+92 300 1234567" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Event Date <span class="required">*</span></label>
+                <input type="date" name="event_date" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Select Event Type <span class="required">*</span></label>
+                <select name="event_type" class="form-select" required>
+                    <option value="">Choose an event...</option>
+                    <option value="nikkah">Nikkah</option>
+                    <option value="engagement">Engagement</option>
+                    <option value="barat">Barat</option>
+                    <option value="walima">Walima</option>
+                    <option value="mehndi">Mehndi</option>
+                    <option value="mayon">Mayon</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Venue Type <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="venue" value="indoor" required> Indoor
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="venue" value="outdoor" required> Outdoor
+                    </label>
                 </div>
+            </div>
 
-                <!-- Email -->
-                <div class="form-group">
-                    <label class="form-label">Email Address <span class="required">*</span></label>
-                    <input type="email" class="form-input" placeholder="your.email@example.com" required>
-                </div>
+            <button type="submit" class="submit-btn">
+                Submit Booking Request
+            </button>
+        </form>
+    </div>
+</section>
 
-                <!-- Contact Number -->
-                <div class="form-group">
-                    <label class="form-label">Contact Number <span class="required">*</span></label>
-                    <input type="tel" class="form-input" placeholder="+92 300 1234567" required>
-                </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 The Knot Studio. All rights reserved.</p>
+        <p>Making your special moments memorable</p>
+    </div>
+</footer>
 
-                <!-- Event Date -->
-                <div class="form-group">
-                    <label class="form-label">Event Date <span class="required">*</span></label>
-                    <input type="date" class="form-input" required>
-                </div>
-
-                <!-- Event Type -->
-                <div class="form-group">
-                    <label class="form-label">Select Event Type <span class="required">*</span></label>
-                    <select class="form-select" required>
-                        <option value="">Choose an event...</option>
-                        <option value="nikkah">Nikkah</option>
-                        <option value="engagement">Engagement</option>
-                        <option value="barat">Barat</option>
-                        <option value="walima">Walima</option>
-                        <option value="mehndi">Mehndi</option>
-                        <option value="mayon">Mayon</option>
-                    </select>
-                </div>
-
-                <!-- Venue Type -->
-                <div class="form-group">
-                    <label class="form-label">Venue Type <span class="required">*</span></label>
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="venue" value="indoor" required>
-                            Indoor
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="venue" value="outdoor" required>
-                            Outdoor
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="submit-btn">Submit Booking Request</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 The Knot Studio. All rights reserved.</p>
-            <p>Making your special moments memorable</p>
-        </div>
-    </footer>
 </body>
 </html>
